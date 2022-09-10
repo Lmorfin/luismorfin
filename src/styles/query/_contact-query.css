@@ -1,0 +1,15 @@
+/* Large Monitor */
+@media only screen and (max-width: 3440px) {
+
+}
+
+/* Standard Monitor */
+@media only screen and (max-width: 1024px) {
+    
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    
+}

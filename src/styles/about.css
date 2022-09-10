@@ -1,0 +1,38 @@
+.about-me {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1.2rem;
+}
+
+.about__description {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+
+.about-text {
+  color: var(--color-header);
+  margin-left: 1.5rem;
+  text-align: left;
+  width: 450px;
+  height: auto;
+}
+
+.tech-stack {
+  color: var(--color-green);
+}
+
+.about__me-image {
+  margin-left: 13%;
+  max-width: 300px;
+  height: auto;
+  box-shadow: 6px 13px 23px -5px rgb(0, 0, 0, 0.46);
+  border-radius: 5rem;
+  border: none;
+  transition: var(--transition);
+}
+
+.about__me-image:hover {
+  transform: rotate(10deg);
+  transition: var(--transition);
+}

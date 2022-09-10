@@ -1,0 +1,21 @@
+footer {
+    background: radial-gradient( var(--color-green), var(--color-bg));
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.footer__logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.socials {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    
+}
+
+.social {
+    margin-left: .3rem;
+}

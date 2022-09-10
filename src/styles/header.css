@@ -1,0 +1,39 @@
+.header__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-typist {
+  color: var(--color-green);
+  padding: 1rem 1rem 0 1rem;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.header-text {
+  font-size: 1.5rem;
+  color:var(--color-header);
+}
+
+.intro-text {
+  color: var(--color-text);
+  padding: 25px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scroll__down {
+  color:var(--color-green);
+  float: right;
+  rotate: 90deg;
+}
+
+.scroll__down:hover {
+  color:white;
+}

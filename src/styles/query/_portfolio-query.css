@@ -1,0 +1,29 @@
+/* Large Monitor */
+@media only screen and (max-width: 3440px) {
+}
+
+/* Standard Monitor */
+@media only screen and (max-width: 1024px) {
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  #portfolio {
+    margin-top: 25rem;
+  }
+
+  .projects__container {
+    margin-left: 0.7rem;
+  }
+
+  .links {
+    font-size: 15px;
+    gap: 5px;
+    margin-left: 65%;
+  }
+
+  .desc {
+    padding: 4px;
+    font-size: 10px;
+  }
+}

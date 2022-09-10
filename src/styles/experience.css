@@ -1,0 +1,20 @@
+.experience-header {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1.2rem;
+}
+
+.work-experience {
+  text-align: left;
+}
+
+.work__details {
+  color: var(--color-header);
+}
+
+.work__details h4 {
+  margin-left: 1.5rem;
+}
+.position {
+  margin-left: 1.5rem;
+}
