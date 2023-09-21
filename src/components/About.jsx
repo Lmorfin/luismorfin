@@ -30,7 +30,7 @@ const About = () => {
             </div>
             <div className="about-card">
               <HiOutlineDesktopComputer className="about-icon" />
-              <h5>Interested In</h5>
+              <h5>Specialized in</h5>
               <small>Full Stack Development</small>
             </div>
           </div>

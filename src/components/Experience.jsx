@@ -72,9 +72,9 @@ const Experience = () => {
       jobTitle: "Software Engineer",
       duration: "Nov 2022 - Present",
       desc: [
-        "Developed clean, efficient, and well-documented code for implementing new features and enhancements in an e-commerce website using advanced technologies like Vue.js, Node.js, MySQL, and Ruby on Rails.",
-        "Created a seamless integration with Etsy v3 API, enabling shop-owners to transmit active products directly from our e-commerce website to their Etsy shops, leading to an efficient platform and an enhanced user experience.",
-        "Devised and implemented an automated order processing system for a major client, significantly improving efficiency and saving valuable time for sales personnel by 30%.",
+        "Proactively addressed and resolved reported bugs on a B2B e-commerce website. Ensured timely bug fixes to enhance website functionality and user experience.",
+        "Implemented an end-to-end Etsy integration feature on a e-commerce platform, allowing seamless order processing between the platform and Etsy, resulting in improved customer engagement and efficient order fulfillment.",
+        "Developed an automated system to facilitate order submission for a client unable to connect through our API. This innovation streamlined order processing, significantly reducing manual input time and enhancing client satisfaction.",
         "Managed and monitored websites, APIs, and order management systems.",
       ],
     },

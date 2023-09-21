@@ -7,8 +7,8 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
-  grid-gap: 10px;
+  grid-template-columns: repeat(3, minmax(150px, 3fr));
+  grid-gap: 50px;
 }
 
 .card {
@@ -55,4 +55,29 @@
   font-size: 30px;
   color: var(--color-green);
   text-decoration: none;
+}
+a {
+  color: var(--color-green);
+}
+a:visited {
+  color: var(--color-green);
+}
+a:hover {
+  color: var(--color-green);
+}
+/* Large Monitor */
+@media only screen and (max-width: 3440px) {
+}
+
+/* Standard Monitor */
+@media only screen and (max-width: 1024px) {
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(10px, 1fr));
+    margin-right: 1.5em;
+  }
 }
