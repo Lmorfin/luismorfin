@@ -20,6 +20,29 @@ const Portfolio = () => {
               </div>
               <div className="card-link gh">
                 <a
+                  href="https://ai-workout-advisor.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AiOutlineLink />
+                </a>
+              </div>
+            </div>
+            <div className="card-title">A.I Workout Advisor</div>
+            <div className="card-body">
+              Utilizing ChatGBT's capabilities, the A.I. Workout Advisor
+              customizes your weekly exercise routines by tailoring them to your
+              goals.
+            </div>
+            <div className="card-tech">React.js, OpenAI API</div>
+          </div>
+          <div className="card">
+            <div className="card-header">
+              <div className="card-icon folder">
+                <AiTwotoneFolderAdd />
+              </div>
+              <div className="card-link gh">
+                <a
                   href="https://github.com/Lmorfin/instrument-bazaar"
                   target="_blank"
                   rel="noreferrer"
