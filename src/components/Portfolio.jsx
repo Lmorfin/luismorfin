@@ -20,7 +20,7 @@ const Portfolio = () => {
               </div>
               <div className="card-link gh">
                 <a
-                  href="https://ai-workout-advisor.vercel.app/"
+                  href="https://ai-workout-generator-gray.vercel.app/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -28,13 +28,14 @@ const Portfolio = () => {
                 </a>
               </div>
             </div>
-            <div className="card-title">A.I Workout Advisor</div>
+            <div className="card-title">A.I Workout Generator</div>
             <div className="card-body">
-              Utilizing ChatGBT's capabilities, the A.I. Workout Advisor
-              customizes your weekly exercise routines by tailoring them to your
-              goals.
+              Get your workout plan! This AI-powered tool leverages Gemini's
+              advanced capabilities to create custom routines designed
+              specifically for your body and goals. Enter your details and let
+              the AI do the work.
             </div>
-            <div className="card-tech">React.js, OpenAI API</div>
+            <div className="card-tech">React.js, Next.js, Gemini API </div>
           </div>
           <div className="card">
             <div className="card-header">
