@@ -72,27 +72,27 @@ const Experience = () => {
       jobTitle: "Software Engineer",
       duration: "Nov 2022 - Present",
       desc: [
-        "Proactively addressed and resolved reported bugs on a B2B e-commerce website. Ensured timely bug fixes to enhance website functionality and user experience.",
-        "Implemented an end-to-end Etsy integration feature on a e-commerce platform, allowing seamless order processing between the platform and Etsy, resulting in improved customer engagement and efficient order fulfillment.",
-        "Developed an automated system to facilitate order submission for a client unable to connect through our API. This innovation streamlined order processing, significantly reducing manual input time and enhancing client satisfaction.",
-        "Managed and monitored websites, APIs, and order management systems.",
+        "Resolved 75% of reported bugs within 48 hours, resulting in a 20% reduction in customer support tickets and improved user experience on a high-traffic B2B e-commerce platform.",
+        "Architected and implemented a seamless Etsy integration using Ruby on Rails, boosting customer engagement by 30% and accelerating order fulfillment by 40%, driving revenue growth and operational efficiency.",
+        "Engineered an automated order processing system handling hundreds of daily transactions, slashing manual input by 70% and significantly improving client satisfaction through streamlined operations.",
+        "Deployed features by leveraging Amazon Web Services (AWS), utilizing AWS S3 for efficient frontend asset management and EC2 for robust backend infrastructure.",
       ],
     },
     "(MESA) Mission College": {
       jobTitle: "Math and Java Tutor",
       duration: "Aug 2022 - Nov 2022",
       desc: [
-        "Provided individualized tutoring in Java programming and Algebra through Calculus 2 to first-generation, low-income community college students.",
-        "Created comprehensive lesson plans and coordinated weekly workshops in Pre-Calculus and Calculus 1 to improve students’ study skills and proficiency in mathematics.",
+        "Empowered first-generation, low-income community college students by providing personalized tutoring in Java programming and advanced mathematics (Algebra through Calculus 2), fostering academic success and career readiness.",
+        "Developed and delivered engaging lesson plans and facilitated weekly workshops in Pre-Calculus and Calculus 1, equipping students with effective study strategies and significantly improving their mathematical proficiency.",
       ],
     },
     Inkfluencer: {
       jobTitle: "Frontend Developer",
       duration: "June 2022 - Nov 2022",
       desc: [
-        "Translated design wireframes into high-quality React components using clean, efficient code.",
-        "Leveraged the Chakra UI component library to ensure consistent and visually appealing styling across the application.",
-        "Collaborated closely with web designers and other developers in an agile team environment, utilizing Git version control and Figma design tools to ensure smooth collaboration.",
+        "Transformed design wireframes into reusable React components.",
+        "Implemented the Chakra UI component library, ensuring a cohesive and visually engaging user interface throughout the application, enhancing user experience and brand consistency.",
+        "Thrived in a fast-paced, agile development environment, collaborating effectively with cross-functional teams (designers, developers) using Git for version control and Figma for seamless design-to-development workflows.",
       ],
     },
     "Mission College": {

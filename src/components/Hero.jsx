@@ -4,7 +4,7 @@ import { BsDownload } from "react-icons/bs";
 import { FadeIn } from "../utils/FadeIn";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Typewriter from "typewriter-effect";
-import Resume from "../assets/MorfinLuis_Resume.pdf";
+import Resume from "../assets/LuisMorfin_Resume.pdf";
 
 const Hero = () => {
   return (
