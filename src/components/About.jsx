@@ -8,108 +8,155 @@ import { PiDiamondLight } from "react-icons/pi";
 
 const About = () => {
   return (
-    <>
-      <h1>{"< About Me / >"}</h1> <div className="divider"></div>
+    <section>
+      <h2 className="section-title">About Me</h2>
+      <div className="divider"></div>
+
       <div className="about-container">
-        <div className="about-img">
-          <img src={img} alt="about-me-avatar" />
+        <div className="about-img about-fade-in">
+          <img src={img} alt="Luis Morfin - Software Engineer" />
         </div>
+
         <div className="about-content">
           <div className="about-cards">
-            <div className="about-card">
+            <div className="about-card about-fade-in">
               <FaUserGraduate className="about-icon" />
               <h5>Education</h5>
               <small>
                 Computer Science B.S., California State University East Bay
               </small>
             </div>
-            <div className="about-card">
+            <div className="about-card about-fade-in">
               <BiSolidMap className="about-icon" />
               <h5>Located In</h5>
               <small>San Jose, CA</small>
             </div>
-            <div className="about-card">
+            <div className="about-card about-fade-in">
               <HiOutlineDesktopComputer className="about-icon" />
               <h5>Specialized in</h5>
               <small>Full Stack Development</small>
             </div>
           </div>
+
           <p className="about-text">
-            I am a passionate and driven Software Engineer with a year of
-            valuable industry experience. As a first-generation college
-            graduate, I proudly earned my undergraduate degree in Computer
-            Science from Cal State East Bay. Throughout my journey, I have honed
-            my skills in Full stack development, gaining valuable expertise in
-            the dynamic e-commerce sector. My experience in building web
-            applications has further solidified my skills and understanding of
-            robust and scalable web applications. <br></br> <br></br> As I
-            embark on my professional journey, I am actively seeking new
-            opportunities that will allow me to apply my skills, contribute to
-            meaningful projects, and further elevate my career to new heights. I
-            am enthusiastic about joining a team of like-minded individuals who
-            share the same drive for innovation and are dedicated to creating
-            impactful software solutions.
+            I’m a passionate and driven <strong>Software Engineer</strong> with
+            over <strong>2+ years</strong> of industry experience, specializing
+            in <strong>Full-stack web development.</strong> I hold a{" "}
+            <strong>Bachelor’s degree in Computer Science </strong>from Cal
+            State East Bay and am proud to be a{" "}
+            <strong>first-generation college graduate.</strong> My career began
+            in the e-commerce sector, where I built and maintained robust,
+            scalable web platforms using technologies like React.js, Vue.js,
+            Node.js, Ruby on Rails, and MySQL.
+          </p>
+
+          <p className="about-text">
+            I’m currently seeking new opportunities where I can contribute to
+            impactful software solutions, collaborate with forward-thinking
+            teams, and continue to grow as an engineer. I’m especially excited
+            by roles that intersect healthcare, education, or infrastructure,
+            and that push the boundaries of technology for good.
           </p>
         </div>
       </div>
-      <h1> Tech I have worked with:</h1>
+
+      <h2 className="section-title">Technologies I've Worked With</h2>
+      <div className="divider"></div>
+
       <div className="tech-stack">
-        <ul className="frontend-stack">
-          <li className="tech-text">Frontend:</li>
-          <li className="tech-text">
-            <PiDiamondLight /> React.js
-          </li>
-          <li className="tech-text">
-            <PiDiamondLight /> Vue.js
-          </li>
-          <li className="tech-text">
-            <PiDiamondLight /> HTML
-          </li>
-          <li className="tech-text">
-            <PiDiamondLight /> CSS
-          </li>
-        </ul>
-        <ul className="backend-stack">
-          <li className="tech-text">Backend:</li>
-          <li className="tech-text">
-            <PiDiamondLight /> Node.js
-          </li>
-          <li className="tech-text">
-            <PiDiamondLight /> Express.js
-          </li>
-          <li className="tech-text">
-            <PiDiamondLight /> Ruby on Rails
-          </li>
-          <li className="tech-text">
-            <PiDiamondLight /> Sanity CMS
-          </li>
-        </ul>
-        <ul className="Database-stack">
-          <li className="tech-text">Database:</li>
-          <li className="tech-text">
-            <PiDiamondLight /> MySQL
-          </li>
-          <li className="tech-text">
-            <PiDiamondLight /> MongoDB
-          </li>
-        </ul>
-        <ul className="other-stack">
-          <li className="tech-text">Other Tools & Languages:</li>
-          <li className="tech-text">
-            <PiDiamondLight /> Ruby
-          </li>
-          <li className="tech-text">
-            <PiDiamondLight /> Python
-          </li>
-          <li className="tech-text">
-            <PiDiamondLight /> Postman
-          </li>
-          <li className="tech-text">
-            <PiDiamondLight /> Git
-          </li>
-        </ul>
+        <div className="tech-category">
+          <h3>Frontend</h3>
+          <ul className="tech-list">
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              React.js
+            </li>
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              Vue.js
+            </li>
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              HTML5
+            </li>
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              CSS3
+            </li>
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              JavaScript
+            </li>
+          </ul>
+        </div>
+
+        <div className="tech-category">
+          <h3>Backend</h3>
+          <ul className="tech-list">
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              Node.js
+            </li>
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              Express.js
+            </li>
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              Ruby on Rails
+            </li>
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              Sanity CMS
+            </li>
+          </ul>
+        </div>
+
+        <div className="tech-category">
+          <h3>Database</h3>
+          <ul className="tech-list">
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              MySQL
+            </li>
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              MongoDB
+            </li>
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              PostgreSQL
+            </li>
+          </ul>
+        </div>
+
+        <div className="tech-category">
+          <h3>Tools & Languages</h3>
+          <ul className="tech-list">
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              Ruby
+            </li>
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              Python
+            </li>
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              Git
+            </li>
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              Postman
+            </li>
+            <li className="tech-item">
+              <PiDiamondLight className="tech-icon" />
+              AWS
+            </li>
+          </ul>
+        </div>
       </div>
-    </>
+    </section>
   );
 };
 

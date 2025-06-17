@@ -11,38 +11,21 @@ const isHorizontal = window.innerWidth < 768;
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
-  if (isHorizontal) {
-    return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`full-width-tabpanel-${index}`}
-        aria-labelledby={`full-width-tab-${index}`}
-        {...other}
-      >
-        {value === index && (
-          <Box p={3}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
-      </div>
-    );
-  } else {
-    return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`vertical-tabpanel`}
-        {...other}
-      >
-        {value === index && (
-          <Box p={3}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
-      </div>
-    );
-  }
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`experience-tabpanel-${index}`}
+      aria-labelledby={`experience-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box>
+          <Typography component="div">{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
 }
 
 TabPanel.propTypes = {
@@ -52,16 +35,10 @@ TabPanel.propTypes = {
 };
 
 function a11yProps(index) {
-  if (isHorizontal) {
-    return {
-      id: `full-width-tab-${index}`,
-      "aria-controls": `full-width-tabpanel-${index}`,
-    };
-  } else {
-    return {
-      id: `vertical-tab-${index}`,
-    };
-  }
+  return {
+    id: `experience-tab-${index}`,
+    "aria-controls": `experience-tabpanel-${index}`,
+  };
 }
 
 const Experience = () => {
@@ -110,31 +87,51 @@ const Experience = () => {
   };
 
   return (
-    <div className="experience">
-      <h1>{"< Experience / >"}</h1> <div className="divider"></div>
-      <Tabs
-        orientation={!isHorizontal ? "horizontal" : "vertical"}
-        variant={isHorizontal ? "fullWidth" : "scrollable"}
-        value={value}
-        onChange={handleChange}
-      >
+    <section className="experience">
+      <h2 className="section-title">Experience</h2>
+      <div className="divider"></div>
+
+      <div className="experience-container">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          variant="scrollable"
+          scrollButtons="auto"
+          aria-label="experience tabs"
+          sx={{
+            "& .MuiTabs-scrollButtons": {
+              color: "var(--color-primary)",
+            },
+          }}
+        >
+          {Object.keys(experience).map((key, i) => (
+            <Tab
+              key={i}
+              label={key}
+              {...a11yProps(i)}
+              className="experience-fade-in"
+            />
+          ))}
+        </Tabs>
+
         {Object.keys(experience).map((key, i) => (
-          <Tab key={i} label={key} {...a11yProps(i)} />
+          <TabPanel value={value} index={i} key={i}>
+            <div className="job-content">
+              <div className="job-header">
+                <h3 className="job-title">{experience[key]["jobTitle"]}</h3>
+                <h4 className="job-company">@ {key}</h4>
+                <p className="job-duration">{experience[key]["duration"]}</p>
+              </div>
+              <ul className="job-desc">
+                {experience[key]["desc"].map(function (item, i) {
+                  return <li key={i}>{item}</li>;
+                })}
+              </ul>
+            </div>
+          </TabPanel>
         ))}
-      </Tabs>
-      {Object.keys(experience).map((key, i) => (
-        <TabPanel value={value} index={i} key={i}>
-          <span className="job-title">{experience[key]["jobTitle"] + " "}</span>
-          <span className="job-company">@ {key}</span>
-          <div className="job-duration">{experience[key]["duration"]}</div>
-          <ul className="job-desc">
-            {experience[key]["desc"].map(function (item, i) {
-              return <li key={i}>{item}</li>;
-            })}
-          </ul>
-        </TabPanel>
-      ))}
-    </div>
+      </div>
+    </section>
   );
 };
 

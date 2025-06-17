@@ -1,34 +1,205 @@
+/* Modern Footer Section */
 .footer-container {
-  margin-top: 16%;
+  margin: var(--space-3xl) 0 var(--space-2xl) 0;
+  padding: var(--space-2xl) 0;
+  border-top: 1px solid var(--color-text-dark);
   text-align: center;
-  font-family: "Source Code Pro", monospace;
-  color: var(--color-green);
+  font-family: var(--font-mono);
+  color: var(--color-text);
 }
-.footer-context {
+
+.footer-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+.footer-text strong {
+  color: var(--color-text-lighter);
+  font-weight: 600;
 }
 
 .footer-icons {
-  font-size: 18px;
   display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  color:var(--color-green);
-}
-.footer-linkedin:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.footer-mail:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.footer-gh:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  gap: var(--space-lg);
+  align-items: center;
+  justify-content: center;
 }
 
-a:visited {
+.footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-text-dark);
+  border-radius: var(--radius-lg);
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  transition: var(--transition-normal);
+  background: rgba(100, 255, 218, 0.05);
+  backdrop-filter: blur(10px);
   text-decoration: none;
-  color: var(--color-green);
+}
+
+.footer-link:hover {
+  border-color: var(--color-primary);
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  color: var(--color-primary-dark);
+}
+
+.footer-link:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.footer-divider {
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-text-dark),
+    transparent
+  );
+  margin: var(--space-md) 0;
+}
+
+.footer-copyright {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  opacity: 0.6;
+  font-family: var(--font-mono);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    margin: var(--space-2xl) 0 var(--space-xl) 0;
+    padding: var(--space-xl) 0;
+  }
+
+  .footer-content {
+    gap: var(--space-md);
+    padding: 0 var(--space-md);
+  }
+
+  .footer-icons {
+    gap: var(--space-md);
+  }
+
+  .footer-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1.125rem;
+  }
+
+  .footer-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    margin: var(--space-xl) 0 var(--space-lg) 0;
+    padding: var(--space-lg) 0;
+  }
+
+  .footer-content {
+    padding: 0 var(--space-sm);
+  }
+
+  .footer-icons {
+    gap: var(--space-sm);
+  }
+
+  .footer-link {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .footer-text {
+    font-size: 0.75rem;
+  }
+
+  .footer-copyright {
+    font-size: 0.7rem;
+  }
+}
+
+/* Animation classes */
+.footer-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: footerFadeIn 0.8s ease-out forwards;
+}
+
+.footer-fade-in:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.footer-fade-in:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.footer-fade-in:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes footerFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation for footer icons */
+.footer-link {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: footerIconSlide 0.5s ease-out forwards;
+}
+
+.footer-link:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.footer-link:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.footer-link:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes footerIconSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect for footer text */
+.footer-text:hover {
+  color: var(--color-text-lighter);
+  transition: var(--transition-fast);
+}
+
+/* Glass morphism effect */
+.footer-glass {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
 }

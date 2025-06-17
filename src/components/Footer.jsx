@@ -1,41 +1,48 @@
 import React from "react";
 import "../styles/footer.css";
 import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className="footer-container">
-      <div className="footer-context">
-        <span>Created and Designed</span>
-        <span>by Luis Morfin </span>
-        <span className="footer-icons">
+    <footer className="footer-container">
+      <div className="footer-content">
+        <div className="footer-icons">
           <a
-            className="footer-linkedin"
+            className="footer-link"
             href="https://www.linkedin.com/in/luis-morfin-/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
           >
             <AiFillLinkedin />
           </a>
           <a
-            className="footer-mail"
+            className="footer-link"
             href="mailto:luismorfin64@gmail.com"
-            target="_blank"
-            style={{ color: "#64ffda" }}
-            rel="noreferrer"
+            aria-label="Email Luis"
           >
             <AiOutlineMail />
           </a>
           <a
-            className="footer-gh"
+            className="footer-link"
             href="https://github.com/Lmorfin"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
           >
             <AiFillGithub />
           </a>
-        </span>
+        </div>
+
+        <div className="footer-divider"></div>
+
+        <p className="footer-copyright footer-fade-in">
+          © {currentYear} Luis Morfin. All rights reserved.
+        </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

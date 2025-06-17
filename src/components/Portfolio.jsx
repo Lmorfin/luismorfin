@@ -8,124 +8,99 @@ import {
 import "../styles/portfolio.css";
 
 const Portfolio = () => {
+  const projects = [
+    {
+      title: "A.I Workout Generator",
+      description:
+        "Get your workout plan! This AI-powered tool leverages Gemini's advanced capabilities to create custom routines designed specifically for your body and goals. Enter your details and let the AI do the work.",
+      technologies: ["React.js", "Next.js", "Gemini API"],
+      liveUrl: "https://ai-workout-generator-gray.vercel.app/",
+      githubUrl: null,
+    },
+    {
+      title: "Instruments Bazaar",
+      description:
+        "This website is an e-commerce platform developed using Next.js and React.js, with Sanity serving as the headless CMS backend.",
+      technologies: ["React.js", "Next.js", "Sanity CMS"],
+      liveUrl: "https://instrument-bazaar.vercel.app/",
+      githubUrl: "https://github.com/Lmorfin/instrument-bazaar",
+    },
+    {
+      title: "Shareable Lists",
+      description:
+        "Developed a real-time list web application which allows users to collaborate and edit lists simultaneously via shareable URL.",
+      technologies: ["React.js", "Node.js", "Supabase"],
+      liveUrl: "https://shareable-lists.vercel.app/",
+      githubUrl: "https://github.com/Lmorfin/shareable-lists",
+    },
+    {
+      title: "Python Scripts Collection",
+      description:
+        "A collection of python scripts to perform my everyday tasks and automate various workflows.",
+      technologies: ["Python", "Automation", "Scripts"],
+      liveUrl: null,
+      githubUrl: "https://github.com/Lmorfin/automated-python-scripts",
+    },
+  ];
+
   return (
-    <div className="portfolio">
-      <h1>{"< Portfolio / >"}</h1> <div className="divider"></div>
+    <section className="portfolio">
+      <h2 className="section-title">Featured Projects</h2>
+      <div className="divider"></div>
+
       <div className="portfolio-container">
-        <ul className="projects-grid">
-          <div className="card">
-            <div className="card-header">
-              <div className="card-icon folder">
-                <AiTwotoneFolderAdd />
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <div key={index} className="card portfolio-fade-in">
+              {/* {project.status && (
+                <div className="project-status">{project.status}</div>
+              )} */}
+
+              <div className="card-header">
+                <div className="card-icon">
+                  <AiTwotoneFolderAdd />
+                </div>
+                <div className="card-links">
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="card-link"
+                      aria-label={`View ${project.title} on GitHub`}
+                    >
+                      <AiFillGithub />
+                    </a>
+                  )}
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="card-link"
+                      aria-label={`View ${project.title} live`}
+                    >
+                      <AiOutlineLink />
+                    </a>
+                  )}
+                </div>
               </div>
-              <div className="card-link gh">
-                <a
-                  href="https://ai-workout-generator-gray.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <AiOutlineLink />
-                </a>
-              </div>
-            </div>
-            <div className="card-title">A.I Workout Generator</div>
-            <div className="card-body">
-              Get your workout plan! This AI-powered tool leverages Gemini's
-              advanced capabilities to create custom routines designed
-              specifically for your body and goals. Enter your details and let
-              the AI do the work.
-            </div>
-            <div className="card-tech">React.js, Next.js, Gemini API </div>
-          </div>
-          <div className="card">
-            <div className="card-header">
-              <div className="card-icon folder">
-                <AiTwotoneFolderAdd />
-              </div>
-              <div className="card-link gh">
-                <a
-                  href="https://github.com/Lmorfin/instrument-bazaar"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <AiFillGithub />
-                </a>
-                <a
-                  href="https://instrument-bazaar.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <AiOutlineLink />
-                </a>
-              </div>
-            </div>
-            <div className="card-title">Instruments Bazaar</div>
-            <div className="card-body">
-              This website is an e-commerce platform developed using Next.js and
-              React.js, with Sanity serving as the headless CMS backend.
-            </div>
-            <div className="card-tech">React.js, Next.js, Sanity CMS</div>
-          </div>
-          <div className="card">
-            <div className="card-header">
-              <div className="card-icon folder">
-                <AiTwotoneFolderAdd />
-              </div>
-              <div className="card-link gh">
-                <a
-                  href="https://github.com/Lmorfin/shareable-lists"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <AiFillGithub />
-                </a>
-                <a
-                  href="https://shareable-lists.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <AiOutlineLink />
-                </a>
+
+              <h3 className="card-title">{project.title}</h3>
+              <p className="card-body">{project.description}</p>
+
+              <div className="card-tech">
+                {project.technologies.map((tech, techIndex) => (
+                  <span key={techIndex} className="tech-tag">
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
-            <div className="card-title">Shareable Lists</div>
-            <div className="card-body">
-              Developed a real-time list web application which allows users to
-              collaborate and edit lists simultaneously Via shareable URL.
-            </div>
-            <div className="card-tech">React.js, Node.js, SupaBase</div>
-          </div>
-          <div className="card">
-            <div className="card-header">
-              <div className="card-icon folder">
-                <AiTwotoneFolderAdd />
-              </div>
-              <div className="card-link gh">
-                <a
-                  href="https://github.com/Lmorfin/automated-python-scripts"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <AiFillGithub />
-                </a>
-                {/* <a
-                  href="https://shareable-lists.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <AiOutlineLink />
-                </a> */}
-              </div>
-            </div>
-            <div className="card-title">Python Scripts Collection</div>
-            <div className="card-body">
-              A collection of python scripts to perform my everyday tasks
-            </div>
-            <div className="card-tech">Python</div>
-          </div>
-        </ul>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
