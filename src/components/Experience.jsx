@@ -6,8 +6,6 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
-const isHorizontal = window.innerWidth < 768;
-
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -76,8 +74,10 @@ const Experience = () => {
       jobTitle: "Research Assistant",
       duration: "Jul 2020 - Sept 2020",
       desc: [
-        "Created an immersive 3D educational game using the powerful Unity Game Engine to educate students about the fascinating field of wind power engineering based on an intro to engineering course lab.",
-        "Implemented interactive C# scripts to enable seamless button pressing and engaging game interactions.",
+        "Developed a 3D first-person educational game designed to teach students wind energy engineering concepts.",
+        "Programmed interactive gameplay mechanics and UI features using C# in Unity.",
+        "Produced a series of tutorial videos focused on building VR game mechanics and interfaces.",
+        "Created project-based demos covering collision detection, user interaction, and UI design.",
       ],
     },
   };
